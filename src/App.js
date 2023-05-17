@@ -1,25 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import { Fragment } from 'react';
+import ProfileList from './Components/Profile/ProfileList' ;
+import './App.css'; 
+import image1 from './per1.jpg' ;
+import image2 from './pers2.jpg';
+import image3 from './pers3.jpg' ;
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
-export default App;
+ function App() { 
+
+const profileList =[
+  {
+  id :1,
+  fullName : "Elyes" , 
+  bio : "fullstack" ,
+  profession :"wed devlp" ,
+  image: image1 ,
+
+  } ,
+
+  {
+  id :2 ,
+  fullName : "Mohamed" , 
+  bio : "fullstack" ,
+  profession :"wed devlp" ,
+  image: image2 ,
+
+  } ,
+   {
+  id :3 ,
+  fullName : "Rana" , 
+  bio : "fullstack" ,
+  profession :"wed devlp" ,
+  image: image3,
+
+  }
+  
+] 
+const alertDescription = desc => alert(`Descrtitio: ${desc}`);
+
+return ( 
+  <Fragment>
+  
+  <ProfileList
+    profileList={profileList}
+    alertDescription={alertDescription}
+  />
+</Fragment> 
+          ); } 
+    export default App;
